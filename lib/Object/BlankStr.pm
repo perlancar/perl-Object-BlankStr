@@ -11,7 +11,7 @@ sub new { bless(\$_[0], $_[0]) }
 
  use Object::BlankStr;
 
- die Object::BlankStr; # dies without printing anything
+ die Object::BlankStr->new; # dies without printing anything
 
 
 =head1 DESCRIPTION

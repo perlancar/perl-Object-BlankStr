@@ -1,5 +1,7 @@
 package Object::BlankStr;
 
+# VERSION
+
 use overload q{""} => sub { " \b" };
 
 sub new { bless(\$_[0], $_[0]) }

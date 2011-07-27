@@ -2,12 +2,12 @@ package Object::BlankStr;
 
 # VERSION
 
-use overload q{""} => sub { " \b" };
+use overload q{""} => sub { "" };
 
 sub new { bless(\$_[0], $_[0]) }
 
 1;
-# ABSTRACT: True-valued 'blank' string object
+# ABSTRACT: True-valued blank string object
 
 =head1 SYNOPSIS
 
@@ -18,12 +18,13 @@ sub new { bless(\$_[0], $_[0]) }
 
 =head1 DESCRIPTION
 
-Provides an object which stringifies to a 'blank' string (actually " \b", that
-is, space followed by a backspace so when printed emulates nothing). Since this
-is an object, it has a true value.
+Object::BlankStr is just an empty object which stringifies to "" (empty string).
+Since it is an object, it has a boolean true value.
 
-This is used for example when throwing exception with die(). You don't want to
-print anything ("") but you need it to be a true value because otherwise Perl
-will use "Died at ..." as the default error message.
+Object::BlankStr can be used where you want to print nothing (empty string) but
+needs a true value. So far the only case I've encountered is die()-ing without
+printing anything. If you just use 'die;' or 'die "";' Perl will print the
+default "Died at ..." message. But if you say 'die Object::BlankStr->new;' Perl
+will die without printing anything.
 
 =cut

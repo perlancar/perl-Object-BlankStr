@@ -1,5 +1,14 @@
 Revision history for Object-BlankStr
 
+0.03    2011-07-28
+
+        [INCOMPATIBLE CHANGES]
+
+        - No longer stringifies to " \b" but to "". No longer has true value *in
+          all cases* (e.g. print 1 if $obj won't print 1), but die $obj still
+          works as advertised.
+
+
 0.02    2011-07-26
 
         No functional changes. Fix synopsis.

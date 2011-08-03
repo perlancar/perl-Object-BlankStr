@@ -7,7 +7,7 @@ use overload q{""} => sub { "" };
 sub new { bless(\"$_[0]", $_[0]) }
 
 1;
-# ABSTRACT: Blank string object
+# ABSTRACT: Object which stringifies to empty string ("")
 
 =head1 SYNOPSIS
 

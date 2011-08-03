@@ -46,4 +46,6 @@ will die without printing anything.
 
 L<Object::NulStr>
 
+L<Object::SpaceBackStr>
+
 =cut

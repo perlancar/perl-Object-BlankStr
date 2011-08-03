@@ -4,7 +4,7 @@ package Object::BlankStr;
 
 use overload q{""} => sub { "" };
 
-sub new { bless(\$_[0], $_[0]) }
+sub new { bless(\"$_[0]", $_[0]) }
 
 1;
 # ABSTRACT: Blank string object

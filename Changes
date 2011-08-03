@@ -1,5 +1,13 @@
 Revision history for Object-BlankStr
 
+0.04    2011-08-03
+
+        [FIXES]
+
+        - Avoid error "Modification of a read-only value attempted" in Perl
+          5.12.4+ (thanks Randy Stauner).
+
+
 0.03    2011-07-28
 
         [INCOMPATIBLE CHANGES]

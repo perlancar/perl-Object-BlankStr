@@ -12,7 +12,8 @@ my $str = Object::BlankStr->new;
 is("$str", "", "object stringifies to empty string");
 
 eval { die $str };
-my $eval_err = "$@";
-is($eval_err, "", "die Object::BlankStr->new doesn't print anything");
+my $eval_err = $@;
+is("$eval_err", "", "die Object::BlankStr->new doesn't print anything");
+is(ref($eval_err), "Object::BlankStr", "object returned by die()");
 
 done_testing();

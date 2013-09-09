@@ -1,5 +1,7 @@
 package Object::BlankStr;
 
+use 5.010001;
+
 # VERSION
 
 use overload q{""} => sub { "" };
